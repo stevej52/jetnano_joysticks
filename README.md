@@ -79,7 +79,7 @@ Run on the PC. Starts the Pygame Joystick modules and Modbus client -You will ne
 
 joysticks.py
 
-Joystick Detection Helper - Run this program on the PC to see what Joysticks pygame sees and all of the axis and button states. Very helpful.
+Joystick Detection Helper - Run this stand alone program on the PC to see what Joysticks pygame sees and all of the axis and button states. Very helpful for setup but not needed to control the robot.
 
 
 drivenano.py
