@@ -74,7 +74,7 @@ The server can be set to only recieve a set number of commands, but is currently
 
 modbus_joy.py
 
-Run on the PC. Starts the Pygame Joystick modules and Modbus client -You will need to set your IP address to the machine running the sync_server. can use localhost addreses if its running on the same machine. Currently set for the Thrustmaster dual joystick setup described above.  Need to set Joystick numbers, axis and buttons so your rig will work if you don't have the Thrustmaster setup. Only 5 axis/buttons transferring to the server now, you coud set up all axis and all buttons if you wanted but I'm keeping it light and only need the 5 to make it work. I'm looking forward to having must of the buttons and hats do something cool like move the camera with servos, make sounds from a speaker or enable the lidar for obstacle avoidance.
+Run on the PC. Starts the Pygame Joystick modules and Modbus client -You will need to set your IP address to the machine running the sync_server. can use localhost addreses if its running on the same machine. Currently set for the Thrustmaster dual joystick setup described above.  Need to set Joystick numbers, axis and buttons so your rig will work if you don't have the Thrustmaster setup. Only 5 axis/buttons transferring to the server now, you coud set up all axis and all buttons if you wanted but I'm keeping it light and only need the 5 to make it work. I'm looking forward to having most of the buttons and hats do something cool like move the camera with servos, make sounds from a speaker or enable the lidar for obstacle avoidance. The PCA9658 can control up to 16 servos or esc's per board and you can daisy-chain 99 boards so thats a lot of servos,
 
 
 joysticks.py
