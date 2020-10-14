@@ -13,6 +13,7 @@ Jetson Nano - Ubuntu 18.04 and ROS2 Eloquent
             - USB wifi card
             - RPLidar
             - Realsense D435
+
 sudo pip3 install adafruit-servokit
 
 
