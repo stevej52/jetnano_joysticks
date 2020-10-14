@@ -33,11 +33,13 @@ start ROS2 Realsense node
 ros2 launch realsense_examples rs_camera.launch.py
 
 
-Lidar node
+Lidar node - Lidar works well in ROS2 but it also has python code unimplemented now
 
 sudo chmod 666 /dev/ttyUSB0
+
 ros2 launch rplidar_ros rplidar.launch.py
-Lidar works well in ROS2 but it also has python code unimplemented now
+
+
 
 Visualization - For the cameras, I keep the subsriptions to a minimum for a faster frame rate for just driving. Nav2 and slamtoolbox create maps and can create pathways but with no control node yet, I'm using Python.
 
