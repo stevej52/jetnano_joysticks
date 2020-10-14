@@ -19,22 +19,28 @@ sudo pip3 install adafruit-servokit
 
 
 Joystick Control - Pygame and Modbus: PyModbus
+
 sudo pip3 install pymodbus
+
 sudo pip3 install pygame
 
 Build the ROS2 packages if needed - realsense2, rplidar, bno055 or use your own camera solution
+
 colcon build --symlink-install
 
 start ROS2 Realsense node
+
 ros2 launch realsense_examples rs_camera.launch.py
 
 
 Lidar node
+
 sudo chmod 666 /dev/ttyUSB0
 ros2 launch rplidar_ros rplidar.launch.py
 Lidar works well in ROS2 but it also has python code unimplemented now
 
 Visualization - For the cameras, I keep the subsriptions to a minimum for a faster frame rate for just driving. Nav2 and slamtoolbox create maps and can create pathways but with no control node yet, I'm using Python.
+
 rviz2
 
 
