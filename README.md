@@ -1,5 +1,5 @@
 # jetnano_joysticks
-Jetson Nano control and vision with ROS2 RealSense2, RPlidar, BNO055, Python, Pygame and ModBus
+Jetson Nano control and vision with 4-Wheel Steering, ROS2 RealSense2, RPlidar, BNO055, Python3, Pygame and ModBus
 ROS2, RealSense2, RPLidar and Python code to drive the Jetson Nano using modbus joystick commands
 
 Using:
@@ -13,6 +13,7 @@ Jetson Nano - Ubuntu 18.04 and ROS2 Eloquent
             - USB wifi card
             - RPLidar
             - Realsense D435
+            - 4-Wheel Steering
 
 sudo pip3 install adafruit-servokit
 
@@ -74,7 +75,7 @@ The server can be set to only recieve a set number of commands, but is currently
 
 modbus_joy.py
 
-Run on the PC. Starts the Pygame Joystick modules and Modbus client -You will need to set your IP address to the machine running the sync_server. can use localhost addreses if its running on the same machine. Currently set for the Thrustmaster dual joystick setup described above.  Need to set Joystick numbers, axis and buttons so your rig will work if you don't have the Thrustmaster setup. Only 5 axis/buttons transferring to the server now, you coud set up all axis and all buttons if you wanted but I'm keeping it light and only need the 5 to make it work. I'm looking forward to having most of the buttons and hats do something cool like move the camera with servos, make sounds from a speaker or enable the lidar for obstacle avoidance. The PCA9658 can control up to 16 servos or esc's per board and you can daisy-chain 99 boards so thats a lot of servos,
+Run on the PC. Starts the Pygame Joystick modules and Modbus client -You will need to set your IP address to the machine running the sync_server. can use localhost addreses if its running on the same machine. Currently set for the Thrustmaster dual joystick setup described above.  Need to set Joystick numbers, axis and buttons so your rig will work if you don't have the Thrustmaster setup. Only 5 axis/buttons transferring to the server now, you coud set up all axis and all buttons if you wanted but I'm keeping it light and only need the 5 to make it work. I'm looking forward to having most of the buttons and hats do something cool like move the camera with servos, make sounds from a speaker or enable the lidar for obstacle avoidance. The PCA9658 can control up to 16 servos or esc's per board and you can daisy-chain 99 boards so thats a lot of servos!
 
 
 joysticks.py
@@ -85,9 +86,14 @@ Joystick Detection Helper - Run this stand alone program on the PC to see what J
 drivenano.py
 
 Run on the Jetson nano with SSH. Starts the robot ModBus listening client and PCA9685 servo/esc PWM driver.
-Previous versions used to detect keypresses but commented out the keypress code and adapted to Modbus Joystick.
+Previous versions used to detect keypresses but commented out the keypress code and adapted to Modbus Joystick. The servo controls are setup for 4-Wheel Steering with the rear wheels turning the opposite direction as the front wheels for better turning radius. The throttle is setup for forward and reverse with no throttle with the throttle joystick in the center.
 
-Of course all code was stolen from somewhere, as is standard practice.
+Of course all code was stolen from somewhere, as is standard practice. Mainly castetsb and the pygame/pymodbus examples.
+
+Nothing is optimized and many of the print statements are still uncommented so I can see whats going on. Commenting those out would make it run smoother.
+
+Next steps: async programs with multithreadding, python lidar obstacle avoidance, tkinter diplay with stats
+
 
 I got the idea from: https://github.com/castetsb/urJoystickControl
 
