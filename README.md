@@ -37,7 +37,7 @@ Visualization - For the cameras, I keep the subsriptions to a minimum for a fast
 rviz2
 
 
-*******************************
+********************************
 Python code
 
 I actually need to get all this running in ROS2, but that becomes difficult when I want my PC to run Ubuntu 20.04 which is fine and can run ROS2 Foxy but... The Jetson Nano image only runs Ubuntu 18.04 and that only allows it to run ROS2 Eloquent whis has less features.
