@@ -101,7 +101,7 @@ I got the idea from: https://github.com/castetsb/urJoystickControl
 
 ros2_pca9685 package created
 
-ROS2 Package to convert /cmd-vel to PWM signals using a PCA9685
+ROS2 Package to convert /cmd_vel to PWM signals using a PCA9685
 
 All code was adapted from these two tutorials.
 
