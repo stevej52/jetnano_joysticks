@@ -151,5 +151,7 @@ source ./install/setup.bash
 
 ros2 run ros2_pca9685 listener
 
+use ROS2 package teleop_twist_joy for joystick control - active only while pushing the 'activate' or 'turbo' button
 
+ros2 launch teleop_twist_joy teleop-launch.py
 
