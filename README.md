@@ -141,9 +141,11 @@ kit.servo[2].angle = bs1 #this is the back servo for 4-Wheel Steering Servo- Run
 
 Also change servo numbers in move_robot() function
 
+------------
+
 Build after all changes made:
 
-cd dev_ws
+cd dev_ws # or your development dirctory
 
 colcon build --packages-select ros2_pca9685
 
